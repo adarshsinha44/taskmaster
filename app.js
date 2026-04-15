@@ -303,7 +303,8 @@ function login(email, password) {
         showToast('Invalid username or password')
         return false
     }
-    write(app.userKey, user)
+    const { password: _, ...sessionUser } = user
+    write(app.userKey, sessionUser)
     showToast(t('loginSuccess'))
     setTimeout(() => {
         window.location.href = 'dashboard.html'
