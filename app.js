@@ -161,11 +161,13 @@ const words = {
 }
 
 function setDefaultData() {
-    const users = read(app.usersKey, [])
-    if (!users.length) {
+    let users = read(app.usersKey, [])
+    if (!Array.isArray(users)) users = []
+    const demoEmail = 'user@taskmaster.com'
+    if (!users.find(u => u.email === demoEmail)) {
         users.push({
             name: 'Demo User',
-            email: 'user@taskmaster.com',
+            email: demoEmail,
             password: '1234'
         })
         write(app.usersKey, users)
@@ -298,6 +300,10 @@ function showToast(text) {
 
 function login(email, password) {
     const users = read(app.usersKey, [])
+    if (!Array.isArray(users)) {
+        showToast('Invalid username or password')
+        return false
+    }
     const user = users.find(u => u.email === email && u.password === password)
     if (!user) {
         showToast('Invalid username or password')
@@ -313,7 +319,8 @@ function login(email, password) {
 }
 
 function signup(name, email, password) {
-    const users = read(app.usersKey, [])
+    let users = read(app.usersKey, [])
+    if (!Array.isArray(users)) users = []
     const exists = users.find(user => user.email === email)
     if (exists) {
         showToast('Account already exists for this email')
