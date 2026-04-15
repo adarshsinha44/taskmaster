@@ -297,33 +297,19 @@ function showToast(text) {
 }
 
 function login(email, password) {
-    fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (!data.token) {
-            showToast('Invalid username or password')
-            return false
-        }
-        // Store user and token in local storage
-        write(app.userKey, data.user)
-        localStorage.setItem('token', data.token)
-        showToast(t('loginSuccess'))
-        setTimeout(() => {
-            window.location.href = 'dashboard.html'
-        }, 500)
-        return true
-    })
-    .catch(err => {
-        console.error(err)
+    const users = read(app.usersKey, [])
+    const user = users.find(u => u.email === email && u.password === password)
+    if (!user) {
         showToast('Invalid username or password')
         return false
-    })
+    }
+    const { password: _, ...sessionUser } = user
+    write(app.userKey, sessionUser)
+    showToast(t('loginSuccess'))
+    setTimeout(() => {
+        window.location.href = 'dashboard.html'
+    }, 500)
+    return true
 }
 
 function signup(name, email, password) {
