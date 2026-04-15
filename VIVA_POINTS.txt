@@ -1,0 +1,53 @@
+Viva points
+
+Project statement
+This is a cognitive-load optimized task management system designed to reduce clutter and make common actions easy for first-time users.
+
+Why this topic
+Many task managers are feature-heavy. Our aim was not to add more features, but to make the main task flow simpler, clearer, and easier to learn.
+
+Main flow
+Login -> Dashboard -> Add Task -> Progress -> Accessibility Settings
+
+How the paper prototype was followed
+The same core screens from the prototype were implemented: login, create account, dashboard, add task, progress, and accessibility settings.
+
+HCI principles used
+1. Shneiderman's Golden Rules
+- Consistency is maintained across all pages.
+- Feedback is shown through badges, progress, and toast messages.
+- Error prevention is supported by clear labels and required fields.
+- User control is supported through settings and task toggles.
+
+2. Norman's Design Principles
+- Signifiers are clear because buttons and fields are visible.
+- Mapping is simple because related controls are grouped together.
+- Feedback is immediate after actions.
+- Constraints are used by limiting unnecessary options in the main flow.
+
+3. Hick's Law
+We reduced the number of choices on key screens so the user can decide faster.
+
+4. Fitts' Law
+Large buttons and clear click areas make the main actions easy to access.
+
+5. Recognition over Recall
+Users do not need to remember hidden actions because labels and navigation stay visible.
+
+6. Aesthetic and Minimalist Design
+The screens avoid unnecessary clutter and show only task-relevant controls.
+
+How feedback was collected
+We showed the working screens to friends in person, then asked them to fill the feedback form based on ease of understanding, dashboard clarity, usability, and comfort.
+
+What was refined after feedback
+- Increased spacing and visual hierarchy
+- Made add task flow shorter and clearer
+- Grouped accessibility controls in one place
+- Improved status visibility through clear badges and progress
+
+Why language change was included
+It supports inclusive design and makes the accessibility page more meaningful during presentation.
+
+If asked about backend
+This version focuses mainly on usability, interface clarity, and interaction flow, which are the core concerns in HCI.

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="progress">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h1 class="brand">Task Master</h1>
+            <p>Stay on top of your tasks with a simpler workflow.</p>
+            <nav class="nav-list">
+                <a class="nav-link" href="dashboard.html">◉ <span data-word="dashboard"></span></a>
+                <a class="nav-link" href="add-task.html">＋ <span data-word="addTask"></span></a>
+                <a class="nav-link active" href="progress.html">▣ <span data-word="progress"></span></a>
+                <a class="nav-link" href="settings.html">⚙ <span data-word="settings"></span></a>
+                <a class="nav-link" href="#" data-logout>↩ <span data-word="logout"></span></a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="topbar">
+                <div>
+                    <h1 class="page-title" data-word="progressTitle"></h1>
+                    <p class="page-subtitle">Track completion clearly with one visual summary.</p>
+                </div>
+                <div class="pill notes-only">Status visibility • simple analytics</div>
+            </div>
+
+            <div class="two-col">
+                <section class="main-card center" id="demoProgressStatus">
+                    <div id="progressRing" class="progress-ring" style="--fill: 0deg;"><span>0%</span></div>
+                    <div class="cards-grid">
+                        <div class="metric-card"><h3>Total</h3><strong id="progressTotal">0</strong></div>
+                        <div class="metric-card"><h3>Completed</h3><strong id="progressCompleted">0</strong></div>
+                        <div class="metric-card"><h3>Pending</h3><strong id="progressPending">0</strong></div>
+                        <div class="metric-card"><h3>High Priority</h3><strong id="progressHigh">0</strong></div>
+                    </div>
+                </section>
+                <section class="section-card">
+                    <div class="section-head"><h3>Task distribution</h3></div>
+                    <div class="bar-wrap">
+                        <div class="bar-row"><strong>Completed</strong><div class="bar"><div id="barCompleted"></div></div><span id="barCompletedText">0%</span></div>
+                        <div class="bar-row"><strong>Pending</strong><div class="bar"><div id="barPending"></div></div><span id="barPendingText">0%</span></div>
+                        <div class="bar-row"><strong>High priority</strong><div class="bar"><div id="barHigh"></div></div><span id="barHighText">0%</span></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="two-col notes-only" style="margin-top: 18px;">
+                <section class="note-card">
+                    <h3 data-word="topFeedback"></h3>
+                    <div class="feedback-box">
+                        <div class="feedback-item"><strong>Understanding the interface</strong><span>Very Easy / Easy</span></div>
+                        <div class="feedback-item"><strong>Adding a new task</strong><span>Very Easy / Easy</span></div>
+                        <div class="feedback-item"><strong>Dashboard clarity</strong><span>Very Easy / Easy</span></div>
+                        <div class="feedback-item"><strong>Overall usability</strong><span>Excellent / Good</span></div>
+                    </div>
+                </section>
+                <section class="note-card">
+                    <h3>How this supports the report</h3>
+                    <ul>
+                        <li>Shows visible completion rate for system status.</li>
+                        <li>Supports the progress screen already present in the prototype and PPT.</li>
+                        <li>Lets us explain feedback-driven refinement using a clear visual summary.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

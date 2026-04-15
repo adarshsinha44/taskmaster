@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h1 class="brand">Task Master</h1>
+            <p>Stay on top of your tasks with a simpler workflow.</p>
+            <nav class="nav-list">
+                <a class="nav-link active" href="dashboard.html">◉ <span data-word="dashboard"></span></a>
+                <a class="nav-link" href="add-task.html">＋ <span data-word="addTask"></span></a>
+                <a class="nav-link" href="progress.html">▣ <span data-word="progress"></span></a>
+                <a class="nav-link" href="settings.html">⚙ <span data-word="settings"></span></a>
+                <a class="nav-link" href="#" data-logout>↩ <span data-word="logout"></span></a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="topbar">
+                <div>
+                    <h1 class="page-title" id="welcomeName"></h1>
+                    <p class="page-subtitle" data-word="todaysFocus"></p>
+                </div>
+                <div class="topbar-tools">
+                    <a class="ghost-btn" href="add-task.html" id="demoFittsAddTask">+ <span data-word="addTask"></span></a>
+                    <div class="pill notes-only">Simple workflow • clear hierarchy</div>
+                </div>
+            </div>
+
+            <div class="metrics-grid" id="demoFeedbackMetrics">
+                <div class="metric-card"><h3 data-word="totalTasks"></h3><strong id="countTotal">0</strong><span>All tasks in one place</span></div>
+                <div class="metric-card"><h3 data-word="pending"></h3><strong id="countPending">0</strong><span>Tasks waiting to be done</span></div>
+                <div class="metric-card"><h3 data-word="completed"></h3><strong id="countCompleted">0</strong><span>Finished tasks so far</span></div>
+                <div class="metric-card"><h3 data-word="highPriority"></h3><strong id="countHigh">0</strong><span>Tasks needing quick attention</span></div>
+            </div>
+
+            <div class="grid-main">
+                <section class="main-card" id="demoConsistencyPanel">
+                    <div class="section-head">
+                        <h2 data-word="dashboard"></h2>
+                        <div class="tabs" id="demoHickTabs">
+                            <button class="tab-btn active" data-filter="all" data-word="allTasks"></button>
+                            <button class="tab-btn" data-filter="due" data-word="dueSoon"></button>
+                            <button class="tab-btn" data-filter="done" data-word="done"></button>
+                        </div>
+                    </div>
+                    <div id="taskList" class="task-list"></div>
+                </section>
+
+                <div class="right-stack">
+                    <section class="note-card notes-only" id="demoDesignNotesCard">
+                        <h3 data-word="whyThisWorks"></h3>
+                        <ul>
+                            <li>Layout stays consistent across screens so actions feel predictable.</li>
+                            <li>Important controls are always visible and easy to understand.</li>
+                            <li>Only a few task views are shown at a time to avoid overload.</li>
+                            <li>Main actions are easy to reach for quick interaction.</li>
+                        </ul>
+                    </section>
+                    <section class="section-card">
+                        <div class="section-head"><h3 data-word="dueSoon"></h3></div>
+                        <div id="dueSoonList" class="feedback-box"></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

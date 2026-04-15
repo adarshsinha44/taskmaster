@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="settings">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h1 class="brand">Task Master</h1>
+            <p>Stay on top of your tasks with a simpler workflow.</p>
+            <nav class="nav-list">
+                <a class="nav-link" href="dashboard.html">◉ <span data-word="dashboard"></span></a>
+                <a class="nav-link" href="add-task.html">＋ <span data-word="addTask"></span></a>
+                <a class="nav-link" href="progress.html">▣ <span data-word="progress"></span></a>
+                <a class="nav-link active" href="settings.html">⚙ <span data-word="settings"></span></a>
+                <a class="nav-link" href="#" data-logout>↩ <span data-word="logout"></span></a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="topbar">
+                <div>
+                    <h1 class="page-title" data-word="settingsTitle"></h1>
+                    <p class="page-subtitle">One place for language, font size, contrast, motion, and layout preferences.</p>
+                </div>
+                <div class="pill notes-only">Accessibility mode • inclusive interaction</div>
+            </div>
+
+            <form id="settingsForm" class="settings-grid">
+                <section class="settings-card">
+                    <h3>Display</h3>
+                    <div class="field">
+                        <label data-word="language"></label>
+                        <select id="language" name="language">
+                            <option value="en">English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label data-word="fontSize"></label>
+                        <select id="fontSize" name="fontSize">
+                            <option value="15">Small</option>
+                            <option value="16">Normal</option>
+                            <option value="18">Large</option>
+                            <option value="20">Extra Large</option>
+                        </select>
+                    </div>
+                    <button class="btn" type="submit" data-word="saveChanges"></button>
+                </section>
+                <section class="settings-card" id="demoUniversalDesign">
+                    <h3>Accessibility</h3>
+                    <div class="switch-row">
+                        <div><strong data-word="highContrast"></strong><span>Improves readability and visibility.</span></div>
+                        <input id="contrast" name="contrast" type="checkbox">
+                    </div>
+                    <div class="switch-row">
+                        <div><strong data-word="reduceMotion"></strong><span>Removes movement for comfort.</span></div>
+                        <input id="reduceMotion" name="reduceMotion" type="checkbox">
+                    </div>
+                    <div class="switch-row">
+                        <div><strong data-word="simpleMode"></strong><span>Keeps the layout visually lighter.</span></div>
+                        <input id="simpleMode" name="simpleMode" type="checkbox">
+                    </div>
+                    <div class="switch-row demo-switch-row">
+                        <div><strong>Show design notes</strong><span>Turns on the explanation view used during class demonstration.</span></div>
+                        <input id="showNotes" name="showNotes" type="checkbox">
+                    </div>
+                    <div class="demo-tools" id="demoTools">
+                        <button type="button" class="btn secondary inline" id="openPrincipleMap">Show principles</button>
+                    </div>
+                </section>
+            </form>
+
+            <div class="two-col notes-only" style="margin-top: 18px;">
+                <section class="note-card">
+                    <h3>Principles shown here</h3>
+                    <ul>
+                        <li><strong>Universal design:</strong> settings support different readability needs.</li>
+                        <li><strong>User control:</strong> preferences can be changed without affecting the main flow.</li>
+                        <li><strong>Consistency:</strong> controls use the same styling and spacing as every other screen.</li>
+                    </ul>
+                </section>
+                <section class="note-card">
+                    <h3>Feedback applied</h3>
+                    <ul>
+                        <li>Simple layout options were added after peer feedback about visual comfort.</li>
+                        <li>Language support was fixed to demonstrate inclusive design more clearly.</li>
+                        <li>All accessibility controls were grouped in one screen to avoid confusion.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div class="demo-modal" id="principleModal" aria-hidden="true">
+        <div class="demo-modal-backdrop" data-close-demo></div>
+        <div class="demo-modal-panel">
+            <div class="demo-modal-head">
+                <h3>Show implemented principles</h3>
+                <button type="button" class="icon-btn" data-close-demo>×</button>
+            </div>
+            <p class="small">Pick a principle and the app will open the screen where it is demonstrated with highlights and arrows.</p>
+            <div class="principle-list">
+                <button type="button" class="principle-item" data-principle="Hick's Law">
+                    <strong>Hick's Law</strong>
+                    <span>Dashboard task views are limited to three quick filters.</span>
+                </button>
+                <button type="button" class="principle-item" data-principle="Fitts' Law">
+                    <strong>Fitts' Law</strong>
+                    <span>Primary add-task and save actions are large and easy to reach.</span>
+                </button>
+                <button type="button" class="principle-item" data-principle="Recognition over Recall">
+                    <strong>Recognition over Recall</strong>
+                    <span>Task entry uses visible labels and grouped controls.</span>
+                </button>
+                <button type="button" class="principle-item" data-principle="Consistency">
+                    <strong>Consistency</strong>
+                    <span>Navigation, spacing, and cards repeat across screens.</span>
+                </button>
+                <button type="button" class="principle-item" data-principle="Feedback">
+                    <strong>Feedback</strong>
+                    <span>Dashboard counts and progress visuals show system status.</span>
+                </button>
+                <button type="button" class="principle-item" data-principle="Universal Design">
+                    <strong>Universal Design</strong>
+                    <span>Accessibility controls support different users from one screen.</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

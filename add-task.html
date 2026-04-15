@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="add-task">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h1 class="brand">Task Master</h1>
+            <p>Stay on top of your tasks with a simpler workflow.</p>
+            <nav class="nav-list">
+                <a class="nav-link" href="dashboard.html">◉ <span data-word="dashboard"></span></a>
+                <a class="nav-link active" href="add-task.html">＋ <span data-word="addTask"></span></a>
+                <a class="nav-link" href="progress.html">▣ <span data-word="progress"></span></a>
+                <a class="nav-link" href="settings.html">⚙ <span data-word="settings"></span></a>
+                <a class="nav-link" href="#" data-logout>↩ <span data-word="logout"></span></a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="topbar">
+                <div>
+                    <h1 class="page-title" data-word="addTaskTitle"></h1>
+                    <p class="page-subtitle">Fill only the fields needed and save the task in one step.</p>
+                </div>
+                <div class="pill notes-only">Recognition over recall • visible labels</div>
+            </div>
+
+            <div class="two-col notes-layout">
+                <section class="main-card" id="demoRecognitionForm">
+                    <form id="taskForm">
+                        <div class="field">
+                            <label data-word="taskTitle"></label>
+                            <input type="text" name="title" placeholder="Prepare HCI viva points">
+                        </div>
+                        <div class="two-col">
+                            <div class="field">
+                                <label data-word="category"></label>
+                                <select name="category">
+                                    <option value="Study">Study</option>
+                                    <option value="Project">Project</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Health">Health</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label data-word="priority"></label>
+                                <select name="priority">
+                                    <option value="Low">Low</option>
+                                    <option value="Medium" selected>Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="two-col">
+                            <div class="field">
+                                <label data-word="dueDate"></label>
+                                <input type="date" name="date">
+                            </div>
+                            <div class="field">
+                                <label data-word="dueTime"></label>
+                                <input type="time" name="time">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label data-word="description"></label>
+                            <textarea name="description" placeholder="Keep the task description short and easy to scan."></textarea>
+                        </div>
+                        <div class="split-row" id="demoFittsActions">
+                            <a class="ghost-btn" href="dashboard.html">Back to Dashboard</a>
+                            <button class="btn inline" type="submit" data-word="saveTask"></button>
+                        </div>
+                    </form>
+                </section>
+                <div class="right-stack notes-only">
+                    <section class="note-card">
+                        <h3 data-word="principleMap"></h3>
+                        <ul>
+                            <li><strong>Minimalist design:</strong> no extra fields are shown during primary task entry.</li>
+                            <li><strong>Good mapping:</strong> date, time, and priority are grouped together in a logical order.</li>
+                            <li><strong>Large targets:</strong> save and navigation buttons are clearly separated.</li>
+                            <li><strong>Error prevention:</strong> required fields avoid half-finished task entries.</li>
+                        </ul>
+                    </section>
+                    <section class="section-card">
+                        <div class="section-head"><h3 data-word="peerTest"></h3></div>
+                        <p class="small" data-word="peerText"></p>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

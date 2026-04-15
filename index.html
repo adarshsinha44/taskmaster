@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="auth-wrap">
+            <section class="hero-card">
+                <div class="hero-badge">Focused planning for students</div>
+                <h1>Task Master</h1>
+                <p>A simple task manager designed for clarity, focus, and quick daily planning.</p>
+                <div class="hero-grid">
+                    <div class="mini-card">
+                        <h3>Quick capture</h3>
+                        <p>Add tasks quickly with a simple form and clear priority tags.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3>Clean dashboard</h3>
+                        <p>See pending work, due items, and completion progress in one focused view.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3>Flexible display</h3>
+                        <p>Adjust language, font size, contrast, and motion from the settings screen.</p>
+                    </div>
+                    <div class="mini-card">
+                        <h3>Progress at a glance</h3>
+                        <p>Track finished work quickly with simple counts and clear status badges.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="auth-card">
+                <div class="auth-top">
+                    <h2 class="brand">Task Master</h2>
+                    <p class="tagline">Plan your tasks with less clutter and more focus.</p>
+                </div>
+                <form id="loginForm">
+                    <div class="field">
+                        <label>Username / Email</label>
+                        <input type="email" name="email" value="user@taskmaster.com" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" name="password" value="1234" required>
+                    </div>
+                    <button class="btn" type="submit">LOGIN</button>
+                </form>
+                <div class="links-row">
+                    <a href="signup.html">Create Account</a>
+                    <span>|</span>
+                    <a href="forgot-password.html">Forgot Password</a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+How to explain the Google Form feedback
+
+We showed the web app to friends in person, let them use the main flow, and then circulated the form.
+
+Questions that directly support the project
+- How easy was it to understand the interface?
+- How easy was it to add a new task?
+- How clear was the dashboard layout?
+- Did the interface feel simple and uncluttered?
+- Did the system provide clear feedback after actions?
+- Overall usability of the system
+
+How to connect form feedback to design changes
+- Very Easy / Easy for understanding the interface
+  We kept the layout shallow and consistent.
+
+- Very Easy / Easy for adding a task
+  We reduced the add task screen to only the main inputs.
+
+- Very Easy / Easy for dashboard clarity
+  We used strong visual hierarchy and grouped task information clearly.
+
+- Strongly Agree / Agree for simple and uncluttered interface
+  We removed extra options from the main flow and used clean spacing.
+
+- Strongly Agree / Agree for clear feedback
+  We added visible completion states, progress bars, and confirmation messages.
+
+- Excellent / Good for overall usability
+  This validated that the final interface was understandable and comfortable to use.
